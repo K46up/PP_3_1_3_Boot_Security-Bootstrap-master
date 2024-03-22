@@ -28,7 +28,7 @@ public class MainController {
         model.addAttribute("allRoles", roleService.getAll());
         return "adminPanel";
     }
-    @PostMapping("/new")
+    @PostMapping("/adminPanel/new")
     public String createUser(@ModelAttribute("newUser")User user) {
         userService.save(user);
         return "redirect:/adminPanel";
